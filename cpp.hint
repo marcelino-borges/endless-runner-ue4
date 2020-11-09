@@ -1,0 +1,9 @@
+#define UCLASS()
+
+#define GENERATED_BODY()
+
+#define UFUNCTION()
+
+#define UPROPERTY()
+
+#define UENUM()
