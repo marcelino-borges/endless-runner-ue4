@@ -73,10 +73,10 @@ void ASidiaCharacter::Tick(float DeltaTime)
 	{
 		Counter += DeltaTime;
 
-		if (Counter == DamageCooldown)
+		if (Counter >= DamageCooldown)
 		{
 			CanTakeDamage = true;
-			Counter = 0;
+			Counter = 0.f;
 		}
 	}
 }
@@ -93,8 +93,8 @@ void ASidiaCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	PlayerInputComponent->BindAxis("MoveRight", this, &ASidiaCharacter::MoveRight);
 
 	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &ASidiaCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &ASidiaCharacter::TouchStopped);
+	//PlayerInputComponent->BindTouch(IE_Pressed, this, &ASidiaCharacter::TouchStarted);
+	//PlayerInputComponent->BindTouch(IE_Released, this, &ASidiaCharacter::TouchStopped);
 
 }
 

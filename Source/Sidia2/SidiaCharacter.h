@@ -92,7 +92,7 @@ public:
 private:
 	FVector HorizontalDirection;
 
-	float Counter;
+	float Counter = 0.f;
 
 	bool CanTakeDamage = true;
 
